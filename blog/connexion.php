@@ -6,10 +6,6 @@ $connect= mysqli_connect("localhost","root","","blog");
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +38,7 @@ $connect= mysqli_connect("localhost","root","","blog");
                     <p>Deja parmis nous ? Connecte toi ici</p>
                     <img src="img/poof.png">
 <?php
-                    if(isset($_POST['login']) && isset($_POST['password'])){
+    if(isset($_POST['login']) && isset($_POST['password'])){
     $login=$_POST['login'];
     $password=$_POST['password'];
     $sql=mysqli_query ($connect,"SELECT * FROM utilisateurs WHERE login='$login' AND password='$password'");
@@ -52,13 +48,14 @@ $connect= mysqli_connect("localhost","root","","blog");
         echo 'Ton mot de passe ou login est faux  ';
     }
      else {
-         if($res[0][4] == $password){
+        if($res[0][4] == $password){
             
-            if ( $password == 'Admin'){
+        if ( $password == 'Admin'){
                 
-                header ("refresh:2;url=admin.php");
+        header ("refresh:2;url=admin.php");
     
-            }else {
+                                    }
+            else {
                 echo $res[0][2] .'Bonjour, tu va être rediriger vers ton profil';
                 $_SESSION["id"] = $res[0][0];
                 header ("refresh:4;url=profil.php");

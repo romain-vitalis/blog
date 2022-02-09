@@ -21,7 +21,8 @@ $res= mysqli_fetch_all($req);
 </head>
 <body>
 <header>
-<?php include("include/header.php") ?></header>
+<?php include("include/header.php") ?>
+</header>
 
         
         
@@ -32,14 +33,13 @@ $res= mysqli_fetch_all($req);
                  <option name="administrateur" value="3">Communauté</option>
          
             </select>
-            <br><br><br>
-      <input name="Titre" placeholder="Titre l'article"></inpute><br /><br /><br />
-      <textarea name="id_text" placeholder="Texte  de l'article"></textarea><br /><br /><br />
+      <input name="Titre" placeholder="Titre l'article"></input><br/>
+      <textarea name="id_text" placeholder="Texte  de l'article"></textarea><br/>
      
       <input type="submit" name="hero" value="Envoyer l'article"/>
      
    </form>
-   <br />
+   <br/>
    <?php 
       if (isset($_POST['hero'])) {
          if(isset($res[0][3]) && isset($_POST['id_text']) && isset($_POST['Titre'])) {

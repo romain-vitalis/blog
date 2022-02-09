@@ -4,9 +4,6 @@ session_start();
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,13 +21,10 @@ session_start();
 <?php include("include/header.php") ?></header>
 
 
-   
-     
-            <div class="container">
+   <div class="container">
            
-            
-                <div class="formu">
-                    <form name="salut" action="" method="post">
+                        <div class="formu">
+                        <form name="salut" action="" method="post">
                         <label class="input1" for="login">Pseudo</label>
                         <input name="login" type="text" placeholder="username" />
 

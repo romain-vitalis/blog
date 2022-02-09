@@ -3,12 +3,8 @@
 session_start();
 $id = $_SESSION["id"];
 $bdd= mysqli_connect("localhost","root","","blog");
-
-
 $req= mysqli_query($bdd,"SELECT * FROM utilisateurs WHERE id = $id");
-
 $res= mysqli_fetch_all($req,MYSQLI_ASSOC);
-
 $login = $res[0]['login'];
 $prenom = $res[0]['prenom'];
 $email = $res[0]['email'];
@@ -26,12 +22,7 @@ if (isset($_POST['env']))
     header("Location: profil.php");
 } 
 
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +64,4 @@ if (isset($_POST['env']))
 </header>
 </main>
 <body>
-    
-
-
 </html>

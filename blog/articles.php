@@ -2,15 +2,9 @@
 
 session_start();
 $idarticle = $_GET['idarticle'];
-
-
 $bdd= mysqli_connect("localhost","root","","blog");
-
-
 $req= mysqli_query($bdd,"SELECT * FROM articles WHERE id = $idarticle");
-
 $res= mysqli_fetch_all($req,MYSQLI_ASSOC);
-
 
 ?>
 

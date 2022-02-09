@@ -37,10 +37,7 @@ $depart = ($pageCourante-1)*$articlesParPage;
                             </div>                  
                         </section>
 </main>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br>
 
-  
    </body>
 <footer>
 <?php include("include/footer.php") ?>
